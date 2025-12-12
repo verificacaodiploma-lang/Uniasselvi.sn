@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UNIASSELVI — Verificação de Diploma</title>
+  <style>
+    :root { --bg:#ffcc00; --card:#fff; --accent:#000; --muted:#f4f4f4; }
+    body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;}
+    .container{max-width:700px;margin:40px auto;background:var(--card);padding:28px;border-radius:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.18);border-left:10px solid var(--accent);}
+    h1{margin:0;text-align:center;color:var(--accent);font-size:30px;font-weight:700;}
+    .slogan{text-align:center;margin-top:6px;font-size:14px;font-style:italic;color:#333;opacity:.9}
+    .info{margin-top:22px;padding:20px;background:var(--muted);border-radius:10px;border:1px solid #e0e0e0;display:none;}
+    .info.active{display:block;animation:fade .6s ease;}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .label{font-weight:700;color:var(--accent)}
+    footer{text-align:center;margin-top:20px;color:#000;font-size:13px;opacity:.9}
+  </style>
+</head>
+<body onload="mostrarAtivo()">
+  <div class="container">
+    <h1>UNIASSELVI — Verificação de Diploma</h1>
+    <div class="slogan">“Educação para transformar vidas.”</div>
+    <div id="dados" class="info">
+      <p><span class="label">Nome:</span> Felipe Cardoso</p>
+      <p><span class="label">Instituição:</span> Centro Universitário Leonardo da Vinci — UNIASSELVI</p>
+      <p><span class="label">Curso:</span> Licenciatura em Letras Inglês</p>
+      <p><span class="label">Conclusão:</span> 10/08/2025</p>
+      <p><span class="label">Registro:</span> Ativo</p>
+      <p><span class="label">Status:</span> ✔ Diploma Ativo</p>
+    </div>
+  </div>
+  <footer>Sistema oficial de verificação — UNIASSELVI</footer>
+  <script>
+    function mostrarAtivo(){ document.getElementById("dados").classList.add("active"); }
+  </script>
+</body>
+</html>
